@@ -344,7 +344,7 @@ display:none;
 }
 #ad{
 position:absolute;
-bottom:20%;
+bottom:50%;
 right:5%;
 border:2px dotted blue;
 }
@@ -516,13 +516,14 @@ name=document.getElementById("name").value
 }
 ////////////
 function submit(){
+console.log(name)
 if(document.getElementById("yes").checked){
-po.innerHTML="<b style='color:red;'>Boss:</b>Sorry about your wife and kids(pauses)..Agent <i style='color:purple;'>"+name+"</i>, the future of the entire planet is in your hands...you're <i>HIRED!!</i>"
+po.innerHTML="<b style='color:red;'>Boss:</b>Sorry about your wife and kids(pauses)..Agent <i style='color:purple;'>"+name+"</i> the future of the entire planet is in your hands...you're <i>HIRED!!</i>"
 setTimeout(function(){
 po.style.display="none"
 },2000)
 }else if(document.getElementById("no").checked){
-po.innerHTML="<b style='color:red;'>Boss:</b>Well agent <i style='color:purple;'>"+name+" </i>,...you might as well fight to survive cause you're stuck here(laughs)...By the way you're <i>HIRED!!</i>"
+po.innerHTML="<b style='color:red;'>Boss:</b>Well agent <i style='color:purple;'>"+name+" </i>...you might as well fight to survive cause you're stuck here(laughs)...By the way you're <i>HIRED!!</i>"
 setTimeout(function(){
 po.style.display="none"
 },2500)
@@ -535,7 +536,6 @@ kills==0
 document.getElementById("blur").style.display="none"
 }
 function retry(){
-name=document.getElementById("name").value
 location.reload()
 }
 setInterval(function(){
@@ -546,7 +546,7 @@ life.value=lif
 if(kills===target){
 document.getElementById("next").style.display="block"
 document.getElementById("blur").style.display="flex"
-document.getElementById("p").innerHTML="Congratulations agent <i style='color:purple;'>"+name+"</i>, you managed to wipe em all..at least for now..., Let's proceed to the next wave, Be careful it only gets worse from here"
+document.getElementById("p").innerHTML="Congratulations agent <i style='color:purple;'>"+name+"</i> you managed to wipe em all..at least for now..., Let's proceed to the next wave, Be careful it only gets worse from here"
 document.getElementById("next").innerHTML="Wave "+ wave
 target=wave*20
 }
@@ -1009,7 +1009,7 @@ spot.size=55
 },5000)
 }
 else if(pow===0){
-po.innerHTML="<b style='color:red;'>Boss:</b>Agent <i style='color:purple;'>"+name+" </i>! you seem to be out of Powerup juice to give the spotlight more power, kill special zombies to get some"
+po.innerHTML="<b style='color:red;'>Boss:</b>Agent <i style='color:purple;'>"+name+" </i>you seem to be out of Powerup juice to give the spotlight more power, kill special zombies to get some"
 po.style.display="inline-block"
 setTimeout(function(){
 po.style.display="none"
